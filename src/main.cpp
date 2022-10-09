@@ -3,7 +3,7 @@
 
 const int pinButton = 23;
 int ButtonState = 99;
-int HueValue = HUE_PURPLE;
+int HueValue = HUE_ORANGE;
 
 #define NUM_LEDS 60
 #define DATA_PIN 2
@@ -38,15 +38,15 @@ void loop()
 
     if (ButtonState != stateButton)
     {
-      if (HueValue == HUE_PURPLE)
+      if (HueValue == HUE_ORANGE)
       {
         HueValue = HUE_AQUA;
         Serial.println("Switch to AQUA");
       }
       else
       {
-        HueValue = HUE_PURPLE;
-        Serial.println("Switch to PURPLE");
+        HueValue = HUE_ORANGE;
+        Serial.println("Switch to Orange");
       }
       ButtonState = stateButton;
     }
